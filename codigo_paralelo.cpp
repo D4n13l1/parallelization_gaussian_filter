@@ -299,7 +299,6 @@ int main(int argc, char** argv){
 				stbi_image_free(*img_rgb); *img_rgb = NULL;
 				stbi_image_free(*img_gray); *img_gray = NULL;
 			
-			#pragma omp parallel for
 			for (int l = 0; l < img_height; l++) {
 				free(img_matrix[l]); 
 				free(img_blurred[l]);
